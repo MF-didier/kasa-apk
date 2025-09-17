@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: black;
+    color: white;
+    /*Gestion de la taille*/
+    height: 209px;
+    width: 100vw;
+    align-self: center;
+  }

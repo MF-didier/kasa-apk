@@ -1,0 +1,17 @@
+@use "/src/styles/index";
+@use "/src/styles/variables";
+@use "/src/styles/mixins";
+
+.rates {
+  display: flex;
+  gap: 0.2rem;
+  color: $primary-bg-kasa-color;
+  font-size: 18px;
+  @include media-query(desktop) {
+    font-size: 24px;
+  }
+  & svg:hover {
+    cursor: pointer;
+    color: $primary-bg-kasa-color;
+  }
+}

@@ -1,0 +1,44 @@
+@use "/src/styles/index"; 
+
+
+.homeTitleContainer {
+  background-image: url("../../assets/images/background-images/bg-home-title.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 111px;
+  box-shadow: 0px 4px 4px 0px $shadow-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-query(desktop) {
+    height: 223px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-overlay-color;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: $white-color;
+    position: relative;
+    padding: 1rem;
+
+    @include media-query(desktop) {
+      font-size: 48px;
+    }
+  }
+}

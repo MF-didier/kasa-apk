@@ -1,0 +1,20 @@
+@use "/src/styles/index";
+@use "/src/styles/main";
+
+.introContainer {
+  width: 100%;
+  height: 111px;
+  overflow: hidden;
+  border-radius: 1rem;
+  @include mixins.media-query(desktop) {
+    height: 223px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+

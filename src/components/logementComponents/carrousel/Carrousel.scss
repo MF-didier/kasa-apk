@@ -1,0 +1,70 @@
+@use "/src/styles/main.scss";
+@use "/src/styles/mixins";
+
+.carrouselContainer {
+    display: flex; // certains enfants du conteneur ne sont pas en position absolue, donc il faut les placer
+    position: relative;
+    height: 225px; // mobile first
+    overflow: hidden;
+    object-fit: contain;
+    max-width: 100%;
+    @include mixins.media-query(desktop) {
+        height: 415px;
+      }
+}
+
+.currentImg {
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .counterPosition {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+  }
+
+  .buttonsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    & button {
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  
+    .left {
+      position: absolute;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+  
+    .right {
+      position: absolute;
+      right: 10px;
+      transform: translateY(-50%);
+    }
+  
+    .right,
+    .left {
+      & svg {
+        font-size: 2rem;
+        @include mixins.media-query(desktop) {
+          font-size: 5rem;
+
+        }
+      }
+    }
+  }

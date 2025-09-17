@@ -1,0 +1,27 @@
+@use "/src/styles/mixins";
+@use "/src/styles/variables";
+@use "/src/styles/main.scss";
+
+
+.home_gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;   
+    // gap: 50px;
+    align-items: center;
+    background-color: #F6F6F6; 
+    padding: 3rem;
+    padding-right: 0.5rem;
+    border-radius: 25px;
+    // width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 1240px){
+        gap: 25px; 
+        padding: 25px 15px;       
+    }
+    @media screen and (max-width: 550px){  
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 0;
+    }
+}
