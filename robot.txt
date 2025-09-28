@@ -1,19 +1,1 @@
-# Bloque tous les robots d'explorer tout le site
-User-agent: *
-Disallow: /
 
-# Permet tous les robots d'explorer tout le site
-User-agent: *
-Disallow:
-
-# Bloque Googlebot d'explorer un répertoire spécifique
-User-agent: Googlebot
-Disallow: /private-directory/
-
-# Permet à tous les robots d'explorer une page spécifique dans un répertoire bloqué
-User-agent: *
-Allow: /private-directory/specific-page.html
-Disallow: /private-directory/
-
-# Spécifie l'URL du sitemap
-Sitemap: https://www.example.com/sitemap.xml
